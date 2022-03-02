@@ -61,4 +61,14 @@
   (find-order (un-sort-exclude tt))
   ;; => (hello-1 hello-2 hello-3)
 
+  ;; testing after including :other tests
+  (k/run-all)
+
+  (find-order tt)
+  ;; => (hello-3 hello-1 hello-2 other-3 other-2 other-1)
+
+  ;; this only un-sorts :hello plan and not :other plan
+  (find-order (un-sort-exclude tt))
+  ;; => (hello-1 hello-2 hello-3 other-3 other-2 other-1)
+
   ,)

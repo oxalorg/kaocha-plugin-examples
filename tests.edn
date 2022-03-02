@@ -4,4 +4,8 @@
  :reporter kaocha.report/documentation
  :tests [{:id :hello
           :dont-randomize? true
+          :kaocha/ns-patterns ["hello-test$"]
+          :test-paths ["test"]}
+         {:id :other
+          :kaocha/ns-patterns ["other-test$"]
           :test-paths ["test"]}]}
