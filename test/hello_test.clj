@@ -40,8 +40,7 @@
 (defplugin hello-test/randomize-exclude
   (post-load [test-plan]
     (def tt test-plan)
-    (println "Post loading: " test-plan)
-    test-plan))
+    (un-sort-exclude test-plan)))
 
 (defn find-order [test-plan]
   (loop [tp test-plan
