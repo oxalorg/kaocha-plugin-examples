@@ -1,0 +1,7 @@
+#kaocha/v1
+{:randomize? true
+ :plugins [:hello-test/randomize-exclude]
+ :reporter kaocha.report/documentation
+ :tests [{:id :hello
+          :dont-randomize? true
+          :test-paths ["test"]}]}
